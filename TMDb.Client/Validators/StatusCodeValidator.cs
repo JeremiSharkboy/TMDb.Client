@@ -3,7 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 
-namespace TMDb.Client.Validators
+namespace TMDB.NET.Validators
 {
     public class StatusCodeValidator : IStatusCodeValidator
     {

@@ -4,9 +4,10 @@ using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using TMDb.Client.JsonConverters;
+using TMDB.Core;
+using TMDB.Core.JsonConverters;
 
-namespace TMDb.Client.Logging
+namespace TMDB.NET.Logging
 {
     internal class LogManager
     {

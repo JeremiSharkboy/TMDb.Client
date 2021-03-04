@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.Authentication;
+using TMDB.Core.Api;
+using TMDB.Core.Api.V3.Models.Authentication;
 
-namespace TMDb.Client.Api.V3.ClientProxies
+namespace TMDB.NET.Api.V3.ClientProxies
 {
     public class AuthenticationProxy : ApiProxy
     {

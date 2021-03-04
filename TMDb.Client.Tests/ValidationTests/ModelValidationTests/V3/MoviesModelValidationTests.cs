@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TMDb.Client.Tests.ValidationTests.ModelTests.V3
+namespace TMDB.Core.Tests.ValidationTests.ModelTests.V3
 {
     public class MoviesModelValidationTests
     {

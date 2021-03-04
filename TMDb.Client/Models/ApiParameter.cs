@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TMDb.Client.Models
+namespace TMDB.NET.Models
 {
     public class ApiParameter
     {

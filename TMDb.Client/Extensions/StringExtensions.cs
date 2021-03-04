@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TMDb.Client
+namespace TMDB.NET
 {
     internal static class StringExtensions
     {

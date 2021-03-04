@@ -3,10 +3,10 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Net.Http.Headers;
-using TMDb.Client.Constants;
-using TMDb.Client.JsonConverters;
+using TMDB.Core.Constants;
+using TMDB.Core.JsonConverters;
 
-namespace TMDb.Client.Configurations
+namespace TMDB.NET.Configurations
 {
     public class RestClientConfiguration : IRestClientConfiguration
     {

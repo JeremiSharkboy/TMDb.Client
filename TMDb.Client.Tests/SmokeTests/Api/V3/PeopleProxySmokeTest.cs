@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.People;
-using TMDb.Client.Tests.TestConstants;
+using TMDB.Core.Api.V3.Models.People;
+using TMDB.Core.Tests.TestConstants;
 using Xunit;
 
-namespace TMDb.Client.Tests.SmokeTests.Api.V3
+namespace TMDB.Core.Tests.SmokeTests.Api.V3
 {
     public class PeopleProxySmokeTest : TestsClient
     {
@@ -17,7 +17,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData((int)Person.JoeRogan,      Language.AmericanEnglish)]
         [InlineData((int)Person.PeteDavidson,  Language.AmericanEnglish)]
         [InlineData((int)Person.RobSchneider,  Language.AmericanEnglish)]
-        public async Task PeopleDetailsSmokeTest(int personId, string language)
+        public async Task PeopleDetailsSmokeTest(uint personId, string language)
         {
             var response = await Client.People.GetAsync(new PeopleDetailsRequest
             {
@@ -30,7 +30,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)Person.PeteDavidson,   1, "2021-01-11", "2021-01-23")]
-        public async Task PeopleChangesSmokeTest(int personId, int page, string startDate, string endDate)
+        public async Task PeopleChangesSmokeTest(uint personId, int page, string startDate, string endDate)
         {
             var response = await Client.People.GetAsync(new PeopleChangesRequest
             {
@@ -52,7 +52,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData((int)Person.JoeRogan,      Language.AmericanEnglish)]
         [InlineData((int)Person.PeteDavidson,  Language.AmericanEnglish)]
         [InlineData((int)Person.RobSchneider,  Language.AmericanEnglish)]
-        public async Task PeopleMovieCreditsSmokeTest(int personId, string language)
+        public async Task PeopleMovieCreditsSmokeTest(uint personId, string language)
         {
             var response = await Client.People.GetAsync(new PeopleMovieCreditsRequest
             {
@@ -73,7 +73,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData((int)Person.JoeRogan,      Language.AmericanEnglish)]
         [InlineData((int)Person.PeteDavidson,  Language.AmericanEnglish)]
         [InlineData((int)Person.RobSchneider,  Language.AmericanEnglish)]
-        public async Task PeopleTVCreditsSmokeTest(int personId, string language)
+        public async Task PeopleTVCreditsSmokeTest(uint personId, string language)
         {
             var response = await Client.People.GetAsync(new PeopleTVCreditsRequest
             {
@@ -93,7 +93,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData((int)Person.JoeRogan,      Language.AmericanEnglish)]
         [InlineData((int)Person.PeteDavidson,  Language.AmericanEnglish)]
         [InlineData((int)Person.RobSchneider,  Language.AmericanEnglish)]
-        public async Task PeopleCombinedCreditsSmokeTest(int personId, string language)
+        public async Task PeopleCombinedCreditsSmokeTest(uint personId, string language)
         {
             var response = await Client.People.GetAsync(new PeopleCombinedCreditsRequest
             {
@@ -113,7 +113,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData((int)Person.JoeRogan,      Language.AmericanEnglish)]
         [InlineData((int)Person.PeteDavidson,  Language.AmericanEnglish)]
         [InlineData((int)Person.RobSchneider,  Language.AmericanEnglish)]
-        public async Task PeopleExternalIdsSmokeTest(int personId, string language)
+        public async Task PeopleExternalIdsSmokeTest(uint personId, string language)
         {
             var response = await Client.People.GetAsync(new PeopleExternalIdsRequest
             {
@@ -132,7 +132,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData((int)Person.JoeRogan     )]
         [InlineData((int)Person.PeteDavidson )]
         [InlineData((int)Person.RobSchneider )]
-        public async Task PeopleImagesSmokeTest(int personId)
+        public async Task PeopleImagesSmokeTest(uint personId)
         {
             var response = await Client.People.GetAsync(new PeopleImagesRequest
             {
@@ -146,7 +146,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [Theory]
         [InlineData((int)Person.AdamDevine,    Language.AmericanEnglish)]
         [InlineData((int)Person.AdamSandler,   Language.AmericanEnglish)]
-        public async Task PeopleTaggedImagesSmokeTest(int personId, string language)
+        public async Task PeopleTaggedImagesSmokeTest(uint personId, string language)
         {
             var response = await Client.People.GetAsync(new PeopleTaggedImagesRequest
             {
@@ -166,7 +166,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData((int)Person.JoeRogan     )]
         [InlineData((int)Person.PeteDavidson )]
         [InlineData((int)Person.RobSchneider )]
-        public async Task PeopleTranslationsSmokeTest(int personId)
+        public async Task PeopleTranslationsSmokeTest(uint personId)
         {
             var response = await Client.People.GetAsync(new PeopleTranslationsRequest
             {

@@ -3,13 +3,14 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Security.Authentication;
 using System.Threading.Tasks;
-using TMDb.Client.Api;
-using TMDb.Client.Builders;
-using TMDb.Client.Configurations;
-using TMDb.Client.Logging;
-using TMDb.Client.Validators;
+using TMDB.Core;
+using TMDB.Core.Api;
+using TMDB.NET.Builders;
+using TMDB.NET.Configurations;
+using TMDB.NET.Logging;
+using TMDB.NET.Validators;
 
-namespace TMDb.Client
+namespace TMDB.NET
 {
     public abstract class HttpClientWrapper : IDisposable
     {

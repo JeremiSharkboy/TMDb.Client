@@ -1,7 +1,7 @@
 ﻿using System;
-using static TMDb.Client.Tests.Configuration;
+using static TMDB.Core.Tests.Configuration;
 
-namespace TMDb.Client.Tests
+namespace TMDB.Core.Tests
 {
     public class TestsSettings
     {

@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Net.Http;
 
-namespace TMDb.Client
+namespace TMDB.NET
 {
     public class HttpResponseResult<TResponse>
     {

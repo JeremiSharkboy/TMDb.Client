@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web;
 
-namespace TMDb.Client
+namespace TMDB.NET
 {
     internal static class ObjectExtensions
     {

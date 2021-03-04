@@ -37,4 +37,7 @@
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
 		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\TMDB.Core\TMDB.Core.csproj" />
+	</ItemGroup>
 </Project>

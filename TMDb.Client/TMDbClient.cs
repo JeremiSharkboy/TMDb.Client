@@ -1,8 +1,8 @@
 ﻿using System;
-using TMDb.Client.Api.V3.ClientProxies;
-using TMDb.Client.Settings;
+using TMDB.Core.Settings;
+using TMDB.NET.Api.V3.ClientProxies;
 
-namespace TMDb.Client
+namespace TMDB.NET
 {
     public interface ITMDbClient
     {
@@ -72,12 +72,6 @@ namespace TMDb.Client
         }
 
         internal ITMDbSettings Settings { get; }
-
-        //public Lazy<AuthenticationProxy> AuthenticationLazy =>
-        //      new Lazy<AuthenticationProxy>(() =>
-        //              new AuthenticationProxy(this));
-
-
 
         public AccountProxy Account { get; set; }
         public AuthenticationProxy Authentication { get; set; }

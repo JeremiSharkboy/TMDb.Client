@@ -2,7 +2,7 @@
 using System;
 using System.Net.Http.Headers;
 
-namespace TMDb.Client.Configurations
+namespace TMDB.NET.Configurations
 {
     public interface IRestClientConfiguration
     {

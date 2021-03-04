@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using TMDb.Client.Api;
-using TMDb.Client.Attributes;
+using TMDB.Core.Api;
+using TMDB.Core.Attributes;
 using Xunit;
 
-namespace TMDb.Client.Tests.ValidationTests.ModelValidationTests
+namespace TMDB.Core.Tests.ValidationTests.ModelValidationTests
 {
     public class RequestBaseValidationTests
     {

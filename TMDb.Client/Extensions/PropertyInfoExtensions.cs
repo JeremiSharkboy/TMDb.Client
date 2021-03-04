@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace TMDb.Client.Extensions
+namespace TMDB.NET.Extensions
 {
     public static class PropertyInfoExtensions
     {

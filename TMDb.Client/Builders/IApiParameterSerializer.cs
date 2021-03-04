@@ -1,7 +1,7 @@
-﻿using TMDb.Client.Api;
-using TMDb.Client.Models;
+﻿using TMDB.Core.Api;
+using TMDB.NET.Models;
 
-namespace TMDb.Client.Builders
+namespace TMDB.NET.Builders
 {
     public interface IApiParameterSerializer
     {

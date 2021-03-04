@@ -4,13 +4,13 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-using TMDb.Client.Api;
-using TMDb.Client.Attributes;
-using TMDb.Client.Enums;
-using TMDb.Client.Extensions;
-using TMDb.Client.Models;
+using TMDB.Core.Api;
+using TMDB.Core.Attributes;
+using TMDB.Core.Enums;
+using TMDB.NET.Extensions;
+using TMDB.NET.Models;
 
-namespace TMDb.Client.Builders
+namespace TMDB.NET.Builders
 {
     public class ApiParameterSerializer : IApiParameterSerializer
     {

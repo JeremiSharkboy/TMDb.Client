@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.Genres;
+using TMDB.Core.Api.V3.Models.Genres;
 
-namespace TMDb.Client.Api.V3.ClientProxies
+namespace TMDB.NET.Api.V3.ClientProxies
 {
     public class GenresProxy : ApiProxy
     {
@@ -12,7 +12,7 @@ namespace TMDb.Client.Api.V3.ClientProxies
         public virtual Task<MovieGenresResponse> GetAsync(MovieGenresRequest request) =>
             Client.SendAsync<MovieGenresResponse>(request);
 
-        public virtual Task<TVGenresResponse> GetAsync(TVGenresRequest request) =>
-            Client.SendAsync<TVGenresResponse>(request);
+        public virtual Task<GenresResponse> GetAsync(GenresRequest request) =>
+            Client.SendAsync<GenresResponse>(request);
     }
 }

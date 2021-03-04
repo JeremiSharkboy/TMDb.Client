@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMDB.Core;
 
-namespace TMDb.Client.Builders
+namespace TMDB.NET.Builders
 {
     public class UrlBuilder
     {

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.Account;
-using TMDb.Client.Api.V3.Models.Authentication;
-using TMDb.Client.Enums;
-using TMDb.Client.Tests.TestConstants;
+using TMDB.Core.Api.V3.Models.Account;
+using TMDB.Core.Api.V3.Models.Authentication;
+using TMDB.Core.Enums;
+using TMDB.Core.Tests.TestConstants;
 using Xunit;
 
-namespace TMDb.Client.Tests.SmokeTests.Api.V3
+namespace TMDB.Core.Tests.SmokeTests.Api.V3
 {
     public class AccountProxySmokeTests : TestsClient
     {

@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.TVEpisodeGroups;
-using TMDb.Client.Tests.TestConstants;
+using TMDB.Core.Api.V3.Models.TVEpisodeGroups;
+using TMDB.Core.Tests.TestConstants;
 using Xunit;
 
-namespace TMDb.Client.Tests.SmokeTests.Api.V3
+namespace TMDB.Core.Tests.SmokeTests.Api.V3
 {
     public class TVEpisodeGroupsProxySmokeTest : TestsClient
     {
@@ -12,7 +12,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData((int)TV.GameOfThrones)]
         public async Task TVEpisodeGroupsSmokeTest(int tvId)
         {
-            var tvEpisodeGroups = await Client.TV.GetAsync(new Client.Api.V3.Models.TV.TVEpisodeGroupsRequest 
+            var tvEpisodeGroups = await Client.TV.GetAsync(new Core.Api.V3.Models.TV.TVEpisodeGroupsRequest 
             { 
                 TVId = tvId 
             });

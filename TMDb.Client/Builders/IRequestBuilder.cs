@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using TMDb.Client.Api;
-using TMDb.Client.Configurations;
-using TMDb.Client.Models;
+using TMDB.Core.Api;
+using TMDB.NET.Configurations;
 
-namespace TMDb.Client.Builders
+namespace TMDB.NET.Builders
 {
     public interface IRequestBuilder
     {

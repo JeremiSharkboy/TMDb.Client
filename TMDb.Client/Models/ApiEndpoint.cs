@@ -1,6 +1,6 @@
 ﻿using System.Net.Http;
 
-namespace TMDb.Client.Models
+namespace TMDB.NET.Models
 {
     public class ApiEndpoint
     {

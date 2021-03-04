@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.Changes;
+using TMDB.Core.Api.V3.Models.Changes;
 using Xunit;
 
-namespace TMDb.Client.Tests.SmokeTests.Api.V3
+namespace TMDB.Core.Tests.SmokeTests.Api.V3
 {
     public class ChangesProxySmokeTests : TestsClient
     {

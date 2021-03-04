@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.TV;
+using TMDB.Core.Api.V3.Models.TV;
+using TMDB.Core.Api;
 
-namespace TMDb.Client.Api.V3.ClientProxies
+namespace TMDB.NET.Api.V3.ClientProxies
 {
     public class TVProxy : ApiProxy
     {

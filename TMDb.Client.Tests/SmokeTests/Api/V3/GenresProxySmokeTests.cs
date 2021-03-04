@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.Genres;
+using TMDB.Core.Api.V3.Models.Genres;
 using Xunit;
 
-namespace TMDb.Client.Tests.SmokeTests.Api.V3
+namespace TMDB.Core.Tests.SmokeTests.Api.V3
 {
     public class GenresProxySmokeTests : TestsClient
     {
@@ -33,12 +33,12 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData(Language.Italian)]
         public async Task TVGenresSmokeTest(string language)
         {
-            var response = await Client.Genres.GetAsync(new TVGenresRequest
+            var response = await Client.Genres.GetAsync(new GenresRequest
             {
                 LanguageAbbreviation = language
             });
 
-            Assert.IsType<TVGenresResponse>(response);
+            Assert.IsType<GenresResponse>(response);
             Assert.True(response.Genres.Any());
         }
     }

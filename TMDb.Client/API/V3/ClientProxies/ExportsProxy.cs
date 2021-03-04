@@ -1,8 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
+using TMDB.Core.Api;
 
-namespace TMDb.Client.Api.V3.ClientProxies
+namespace TMDB.NET.Api.V3.ClientProxies
 {
     // TODO: Need a way to alter base address inside http client proxy (subdomain is different)")]
     public class ExportsProxy : ApiProxy

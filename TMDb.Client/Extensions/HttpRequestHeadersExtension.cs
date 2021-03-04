@@ -2,10 +2,10 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http.Headers;
-using TMDb.Client.Constants;
-using TMDb.Client.Models;
+using TMDB.Core.Constants;
+using TMDB.NET.Models;
 
-namespace TMDb.Client.Extensions
+namespace TMDB.NET.Extensions
 {
     public static class HttpRequestHeadersExtension
     {

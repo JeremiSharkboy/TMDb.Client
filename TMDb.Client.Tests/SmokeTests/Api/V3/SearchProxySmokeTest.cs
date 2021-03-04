@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models;
-using TMDb.Client.Api.V3.Models.Search;
+using TMDB.Core.Api.V3.Models;
+using TMDB.Core.Api.V3.Models.Search;
 using Xunit;
 
-namespace TMDb.Client.Tests.SmokeTests.Api.V3
+namespace TMDB.Core.Tests.SmokeTests.Api.V3
 {
     public class SearchProxySmokeTest : TestsClient
     {
         [Theory]
         [InlineData("game of thrones", 1, Language.AmericanEnglish, CountryCode.UnitedStatesOfAmerica, false)]
         [InlineData("true crime",      1, Language.AmericanEnglish, CountryCode.UnitedStatesOfAmerica, false)]
-        public async Task MultiSearchSmokeTest(string query, int page, string language, string region, bool includeAdult)
+        public async Task MultiSearchSmokeTest(string query, uint page, string language, string region, bool includeAdult)
         {
             var response = await Client.Search.GetAsync(new MultiSearchRequest
             {
@@ -30,7 +30,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [Theory]
         [InlineData("horror",     1, Language.AmericanEnglish)]
         [InlineData("collezione", 1, Language.Italian)]
-        public async Task SearchCollectionsSmokeTest(string query, int page, string language)
+        public async Task SearchCollectionsSmokeTest(string query, uint page, string language)
         {
             var response = await Client.Search.GetAsync(new SearchCollectionsRequest
             {
@@ -46,7 +46,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [Theory]
         [InlineData("hbo", 1)]
         [InlineData("abc", 1)]
-        public async Task SearchCompaniesSmokeTest(string query, int page)
+        public async Task SearchCompaniesSmokeTest(string query, uint page)
         {
             var response = await Client.Search.GetAsync(new SearchCompaniesRequest
             {
@@ -61,7 +61,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [Theory]
         [InlineData("thriller",   1)]
         [InlineData("true crime", 1)]
-        public async Task SearchKeywordsSmokeTest(string query, int page)
+        public async Task SearchKeywordsSmokeTest(string query, uint page)
         {
             var response = await Client.Search.GetAsync(new SearchKeywordsRequest
             {
@@ -76,7 +76,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [Theory]
         [InlineData("insidious", 1, Language.AmericanEnglish, false)]
         [InlineData("replica",   1, Language.AmericanEnglish, false)]
-        public async Task SearchMoviesSmokeTest(string query, int page, string language, bool includeAdult)
+        public async Task SearchMoviesSmokeTest(string query, uint page, string language, bool includeAdult)
         {
             var response = await Client.Search.GetAsync(new SearchMoviesRequest
             {
@@ -93,7 +93,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [Theory]
         [InlineData("adam", 1, Language.AmericanEnglish, null, null)]
         [InlineData("pete", 1, Language.AmericanEnglish, null, false)]
-        public async Task SearchPeopleSmokeTest(string query, int page, string language, string region, bool? includeAdult)
+        public async Task SearchPeopleSmokeTest(string query, uint page, string language, string region, bool? includeAdult)
         {
             var response = await Client.Search.GetAsync(new SearchPeopleRequest
             {
@@ -111,7 +111,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [Theory]
         [InlineData("dateline",   1, Language.AmericanEnglish, 2010, false)]
         [InlineData("true crime", 1, Language.AmericanEnglish, 2010, false)]
-        public async Task SearchTVSmokeTest(string query, int page, string language, int? firstAirDateYear, bool? includeAdult)
+        public async Task SearchTVSmokeTest(string query, uint page, string language, int? firstAirDateYear, bool? includeAdult)
         {
             var response = await Client.Search.GetAsync(new SearchTVRequest
             {

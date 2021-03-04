@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.TV;
-using TMDb.Client.Tests.TestConstants;
+using TMDB.Core.Api.V3.Models.TV;
+using TMDB.Core.Tests.TestConstants;
 using Xunit;
 
-namespace TMDb.Client.Tests.SmokeTests.Api.V3
+namespace TMDB.Core.Tests.SmokeTests.Api.V3
 {
     public class TVProxySmokeTests : TestsClient
     {
@@ -57,7 +57,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData(1, Language.AmericanEnglish)]
-        public async Task PopularTVSmokeTest(int page, string language)
+        public async Task PopularTVSmokeTest(uint page, string language)
         {
             var response = await Client.TV.GetAsync(new PopularTVRequest
             {
@@ -317,7 +317,7 @@ namespace TMDb.Client.Tests.SmokeTests.Api.V3
         [InlineData(6, Language.AmericanEnglish)]
         [InlineData(7, Language.AmericanEnglish)]
         [InlineData(9, Language.AmericanEnglish)]
-        public async Task TVOnTheAirSmokeTest(int page, string language)
+        public async Task TVOnTheAirSmokeTest(uint page, string language)
         {
             var response = await Client.TV.GetAsync(new TVOnTheAirRequest
             {

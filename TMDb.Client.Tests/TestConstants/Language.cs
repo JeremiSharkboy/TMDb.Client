@@ -1,4 +1,4 @@
-﻿namespace TMDb.Client.Tests
+﻿namespace TMDB.Core.Tests
 {
     public static class Language
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.Find;
-using TMDb.Client.Enums;
+using TMDB.Core.Api.V3.Models.Find;
+using TMDB.Core.Enums;
 using Xunit;
 
-namespace TMDb.Client.Tests.SmokeTests.Api.V3
+namespace TMDB.Core.Tests.SmokeTests.Api.V3
 {
     public class FindProxySmokeTests : TestsClient
     {

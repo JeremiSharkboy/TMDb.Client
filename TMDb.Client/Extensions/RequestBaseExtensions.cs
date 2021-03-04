@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using TMDb.Client.Api;
-using TMDb.Client.Attributes;
-using TMDb.Client.Models;
+using TMDB.Core.Api;
+using TMDB.Core.Attributes;
+using TMDB.NET.Models;
 
-namespace TMDb.Client.Extensions
+namespace TMDB.NET.Extensions
 {
     public static class RequestBaseExtensions
     {

@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace TMDb.Client.Tests
+namespace TMDB.Core.Tests
 {
     public static class Configuration
     {

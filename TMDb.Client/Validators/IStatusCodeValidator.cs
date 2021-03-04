@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 
-namespace TMDb.Client.Validators
+namespace TMDB.NET.Validators
 {
     public interface IStatusCodeValidator
     {

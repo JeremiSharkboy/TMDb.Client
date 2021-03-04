@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using TMDb.Client.Api.V3.Models.Account;
-using TMDb.Client.Api.V3.Models.Authentication;
+using TMDB.Core.Api.V3.Models.Account;
+using TMDB.Core.Api.V3.Models.Authentication;
+using TMDB.NET;
 
-namespace TMDb.Client.Tests
+namespace TMDB.Core.Tests
 {
     public class TestsClient : IDisposable
     {

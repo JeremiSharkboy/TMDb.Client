@@ -1,4 +1,4 @@
-﻿namespace TMDb.Client.Tests.TestConstants
+﻿namespace TMDB.Core.Tests.TestConstants
 {
     public enum Keyword
     {

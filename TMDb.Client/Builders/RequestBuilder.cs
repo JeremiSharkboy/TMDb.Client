@@ -2,12 +2,13 @@
 using System.Linq;
 using System.Net.Http;
 using System.Text;
-using TMDb.Client.Api;
-using TMDb.Client.Configurations;
-using TMDb.Client.Constants;
-using TMDb.Client.Extensions;
+using TMDB.Core;
+using TMDB.Core.Api;
+using TMDB.Core.Constants;
+using TMDB.NET.Extensions;
+using TMDB.NET.Configurations;
 
-namespace TMDb.Client.Builders
+namespace TMDB.NET.Builders
 {
     public class RequestBuilder : IRequestBuilder
     {
