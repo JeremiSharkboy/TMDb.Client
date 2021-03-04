@@ -15,7 +15,7 @@ namespace TMDb.Client.Tests
             AppSettings = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", false, true)
-                .AddJsonFile($"appsettings.{EnvironmentName}.json", false, true)
+                //.AddJsonFile($"appsettings.{EnvironmentName}.json", false, true)
                 .Build();
         }
     }

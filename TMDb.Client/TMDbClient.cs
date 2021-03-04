@@ -4,7 +4,35 @@ using TMDb.Client.Settings;
 
 namespace TMDb.Client
 {
-    public class TMDbClient : HttpClientWrapper
+    public interface ITMDbClient
+    {
+        public AccountProxy Account { get; set; }
+        public AuthenticationProxy Authentication { get; set; }
+        public CertificationsProxy Certifications { get; set; }
+        public ChangesProxy Changes { get; set; }
+        public CollectionsProxy Collections { get; set; }
+        public ConfigurationProxy Configuration { get; set; }
+        public CreditsProxy Credits { get; set; }
+        public DiscoverProxy Discover { get; set; }
+        public ExportsProxy Exports { get; set; }
+        public FindProxy Find { get; set; }
+        public GenresProxy Genres { get; set; }
+        public GuestSessionsProxy GuestSessions { get; set; }
+        public KeywordsProxy Keywords { get; set; }
+        public ListsProxy Lists { get; set; }
+        public MoviesProxy Movies { get; set; }
+        public NetworkProxy Network { get; set; }
+        public PeopleProxy People { get; set; }
+        public ReviewsProxy Reviews { get; set; }
+        public SearchProxy Search { get; set; }
+        public TrendingProxy Trending { get; set; }
+        public TVEpisodeGroupsProxy TVEpisodeGroups { get; set; }
+        public TVEpisodesProxy TVEpisodes { get; set; }
+        public TVProxy TV { get; set; }
+        public TVSeasonsProxy TVSeasons { get; set; }
+    }
+
+    public class TMDbClient : HttpClientWrapper, ITMDbClient
     {
         public TMDbClient(string apiKey) : this(DefaultTMDbSettings.CreateInstance(apiKey))
         {
@@ -16,31 +44,31 @@ namespace TMDb.Client
             if (settings.ApiKey.IsNullOrEmpty())
                 throw new ArgumentNullException(nameof(settings.ApiKey));
 
-            Settings        = settings;
-            Account         = new AccountProxy(this);
-            Authentication  = new AuthenticationProxy(this);
-            Certifications  = new CertificationsProxy(this);
-            Changes         = new ChangesProxy(this);
-            Collections     = new CollectionsProxy(this);
-            Configuration   = new ConfigurationProxy(this);
-            Credits         = new CreditsProxy(this);
-            Discover        = new DiscoverProxy(this);
-            Exports         = new ExportsProxy(this);
-            Find            = new FindProxy(this);
-            Genres          = new GenresProxy(this);
-            GuestSessions   = new GuestSessionsProxy(this);
-            Keywords        = new KeywordsProxy(this);
-            Lists           = new ListsProxy(this);
-            Movies          = new MoviesProxy(this);
-            Network         = new NetworkProxy(this);
-            People          = new PeopleProxy(this);
-            Reviews         = new ReviewsProxy(this);
-            Search          = new SearchProxy(this);
-            Trending        = new TrendingProxy(this);
+            Settings = settings;
+            Account = new AccountProxy(this);
+            Authentication = new AuthenticationProxy(this);
+            Certifications = new CertificationsProxy(this);
+            Changes = new ChangesProxy(this);
+            Collections = new CollectionsProxy(this);
+            Configuration = new ConfigurationProxy(this);
+            Credits = new CreditsProxy(this);
+            Discover = new DiscoverProxy(this);
+            Exports = new ExportsProxy(this);
+            Find = new FindProxy(this);
+            Genres = new GenresProxy(this);
+            GuestSessions = new GuestSessionsProxy(this);
+            Keywords = new KeywordsProxy(this);
+            Lists = new ListsProxy(this);
+            Movies = new MoviesProxy(this);
+            Network = new NetworkProxy(this);
+            People = new PeopleProxy(this);
+            Reviews = new ReviewsProxy(this);
+            Search = new SearchProxy(this);
+            Trending = new TrendingProxy(this);
             TVEpisodeGroups = new TVEpisodeGroupsProxy(this);
-            TVEpisodes      = new TVEpisodesProxy(this);
-            TV              = new TVProxy(this);
-            TVSeasons       = new TVSeasonsProxy(this);
+            TVEpisodes = new TVEpisodesProxy(this);
+            TV = new TVProxy(this);
+            TVSeasons = new TVSeasonsProxy(this);
         }
 
         internal ITMDbSettings Settings { get; }
@@ -49,29 +77,31 @@ namespace TMDb.Client
         //      new Lazy<AuthenticationProxy>(() =>
         //              new AuthenticationProxy(this));
 
-        public AccountProxy Account { get; protected set; }
-        public AuthenticationProxy Authentication { get; protected set; }
-        public CertificationsProxy Certifications { get; protected set; }
-        public ChangesProxy Changes { get; protected set; }
-        public CollectionsProxy Collections { get; protected set; }
-        public ConfigurationProxy Configuration { get; protected set; }
-        public CreditsProxy Credits { get; protected set; }
-        public DiscoverProxy Discover { get; protected set; }
-        public ExportsProxy Exports { get; protected set; }
-        public FindProxy Find { get; protected set; }
-        public GenresProxy Genres { get; protected set; }
-        public GuestSessionsProxy GuestSessions { get; protected set; }
-        public KeywordsProxy Keywords { get; protected set; }
-        public ListsProxy Lists { get; protected set; }
-        public MoviesProxy Movies { get; protected set; }
-        public NetworkProxy Network { get; protected set; }
-        public PeopleProxy People { get; protected set; }
-        public ReviewsProxy Reviews { get; protected set; }
-        public SearchProxy Search { get; protected set; }
-        public TrendingProxy Trending { get; protected set; }
-        public TVEpisodeGroupsProxy TVEpisodeGroups { get; protected set; }
-        public TVEpisodesProxy TVEpisodes { get; protected set; }
-        public TVProxy TV { get; protected set; }
-        public TVSeasonsProxy TVSeasons { get; protected set; }
+
+
+        public AccountProxy Account { get; set; }
+        public AuthenticationProxy Authentication { get; set; }
+        public CertificationsProxy Certifications { get; set; }
+        public ChangesProxy Changes { get; set; }
+        public CollectionsProxy Collections { get; set; }
+        public ConfigurationProxy Configuration { get; set; }
+        public CreditsProxy Credits { get; set; }
+        public DiscoverProxy Discover { get; set; }
+        public ExportsProxy Exports { get; set; }
+        public FindProxy Find { get; set; }
+        public GenresProxy Genres { get; set; }
+        public GuestSessionsProxy GuestSessions { get; set; }
+        public KeywordsProxy Keywords { get; set; }
+        public ListsProxy Lists { get; set; }
+        public MoviesProxy Movies { get; set; }
+        public NetworkProxy Network { get; set; }
+        public PeopleProxy People { get; set; }
+        public ReviewsProxy Reviews { get; set; }
+        public SearchProxy Search { get; set; }
+        public TrendingProxy Trending { get; set; }
+        public TVEpisodeGroupsProxy TVEpisodeGroups { get; set; }
+        public TVEpisodesProxy TVEpisodes { get; set; }
+        public TVProxy TV { get; set; }
+        public TVSeasonsProxy TVSeasons { get; set; }
     }
 }
