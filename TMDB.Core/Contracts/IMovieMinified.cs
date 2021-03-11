@@ -9,7 +9,7 @@ namespace TMDB.Core.Contracts
         bool Video { get; set; }
 
         double? Popularity { get; set; }
-        double? VoteAverage { get; set; }
+        double VoteAverage { get; set; }
 
         uint Id { get; set; }
         int VoteCount { get; set; }

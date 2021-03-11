@@ -6,8 +6,8 @@ namespace TMDB.Core.Entities.Media
     public interface ITVMinified
     {
         double? Popularity { get; set; }
-        double? VoteAverage { get; set; }
-        int Id { get; set; }
+        double VoteAverage { get; set; }
+        uint Id { get; set; }
         int? VoteCount { get; set; }
 
         string BackdropPath { get; set; }

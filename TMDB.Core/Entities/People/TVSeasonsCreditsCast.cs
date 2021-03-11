@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace TMDB.Core.Entities.People
 {
+    [DebuggerDisplay("{OriginalName}")]
     public class TVSeasonsCreditsCast : TVSeasonsCreditsCrew
     {
         [JsonProperty("order")]

@@ -18,7 +18,7 @@ namespace TMDB.Core.Entities.Media
         public virtual double? Popularity { get; set; }
 
         [JsonProperty("vote_average")]
-        public virtual double? VoteAverage { get; set; }
+        public virtual double VoteAverage { get; set; }
 
         [JsonProperty("vote_count")]
         public virtual int VoteCount { get; set; }

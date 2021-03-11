@@ -19,7 +19,7 @@ namespace TMDB.Core.Api.V3.Models.Movies
         public virtual double? Popularity { get; set; }
 
         [JsonProperty("vote_average")]
-        public virtual double? VoteAverage { get; set; }
+        public virtual double VoteAverage { get; set; } = 0;
 
         [JsonProperty("budget")]
         public virtual int? Budget { get; set; }

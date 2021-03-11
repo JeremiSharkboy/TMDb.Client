@@ -10,10 +10,10 @@ namespace TMDB.Core.Entities.Media
         public double? Popularity { get; set; }
 
         [JsonProperty("vote_average")]
-        public double? VoteAverage { get; set; }
+        public double VoteAverage { get; set; }
 
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public uint Id { get; set; }
 
         [JsonProperty("vote_count")]
         public int? VoteCount { get; set; }

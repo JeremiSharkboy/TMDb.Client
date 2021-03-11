@@ -7,6 +7,6 @@ namespace TMDB.Core.Api.V3.Models.TV
         [ApiParameter(
             Name = "tv_id",
             ParameterType = ParameterType.Path)]
-        public virtual int TVId { get; set; }
+        public virtual uint TVId { get; set; }
     }
 }

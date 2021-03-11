@@ -16,10 +16,10 @@ namespace TMDB.Core.Api.V3.Models.TV
         public virtual double? Popularity { get; set; }
 
         [JsonProperty("vote_average")]
-        public virtual double? VoteAverage { get; set; }
+        public virtual double VoteAverage { get; set; }
 
         [JsonProperty("id")]
-        public virtual int Id { get; set; }
+        public virtual uint Id { get; set; }
 
         [JsonProperty("vote_count")]
         public virtual int? VoteCount { get; set; }

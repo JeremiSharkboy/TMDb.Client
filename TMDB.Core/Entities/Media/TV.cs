@@ -16,13 +16,13 @@ namespace TMDB.Core.Entities.Media
         public virtual double? Popularity { get; set; }
 
         [JsonProperty("vote_average")]
-        public virtual double? VoteAverage { get; set; }
+        public virtual double VoteAverage { get; set; }
 
         [JsonProperty("vote_count")]
         public virtual int? VoteCount { get; set; }
 
         [JsonProperty("id")]
-        public virtual int Id { get; set; }
+        public virtual uint Id { get; set; }
 
         [JsonProperty("number_of_episodes")]
         public virtual int? NumberOfEpisodes { get; set; }
