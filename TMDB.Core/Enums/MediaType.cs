@@ -4,7 +4,7 @@ namespace TMDB.Core.Enums
 {
     public enum MediaType
     {
-        All = 0,
+        Unknown,
         [Description("movie")]
         Movie,
         [Description("tv")]

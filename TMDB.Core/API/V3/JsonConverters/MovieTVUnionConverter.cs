@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using TMDB.Core.Api.V3.Models.Find;
+using TMDB.Core.Api.V3.Models.Search;
 
 namespace TMDB.Core.JsonConverters
 {
@@ -48,4 +49,6 @@ namespace TMDB.Core.JsonConverters
         private static MovieTVUnionConverter _instance;
         public static MovieTVUnionConverter Instance => _instance ??= new MovieTVUnionConverter();
     }
+
+
 }

@@ -10,7 +10,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
     {
         [Theory]
         [InlineData((int)TV.GameOfThrones)]
-        public async Task TVEpisodeGroupsSmokeTest(int tvId)
+        public async Task TVEpisodeGroupsSmokeTest(uint tvId)
         {
             var tvEpisodeGroups = await Client.TV.GetAsync(new Core.Api.V3.Models.TV.TVEpisodeGroupsRequest 
             { 

@@ -14,7 +14,7 @@ namespace TMDB.Core.Api.V3.Models.People
         public virtual double? Popularity { get; set; }
 
         [JsonProperty("id")]
-        public virtual int Id { get; set; }
+        public virtual uint Id { get; set; }
 
         [JsonProperty("name")]
         public virtual string Name { get; set; }

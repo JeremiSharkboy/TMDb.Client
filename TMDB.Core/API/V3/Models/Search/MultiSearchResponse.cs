@@ -1,11 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using TMDB.Core.JsonConverters;
 
 namespace TMDB.Core.Api.V3.Models.Search
 {
     public class MultiSearchResponse : TMDbCollectionResponse
     {
         [JsonProperty("results")]
-        public IEnumerable<MultiSearchResultUnion> Results { get; set; }
+        public virtual IEnumerable<MultiSearchResultUnion> Results { get; set; }
     }
 }

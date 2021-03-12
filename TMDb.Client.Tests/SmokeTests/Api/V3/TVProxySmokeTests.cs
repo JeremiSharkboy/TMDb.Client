@@ -13,7 +13,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
         [InlineData((int)TV.BlackMirror, Language.AmericanEnglish)]
         [InlineData((int)TV.GameOfThrones, Language.BritishEnglish)]
         [InlineData((int)TV.StrangerThings, Language.CanadianFrench)]
-        public async Task AlternativeTVTitlesSmokeTest(int tvId, string language)
+        public async Task AlternativeTVTitlesSmokeTest(uint tvId, string language)
         {
             var response = await Client.TV.GetAsync(new AlternativeTVTitlesRequest
             {
@@ -94,7 +94,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
         [InlineData((int)TV.GameOfThrones, 1, Language.AmericanEnglish)]
         [InlineData((int)TV.GameOfThrones, 2, Language.AmericanEnglish)]
         [InlineData((int)TV.GameOfThrones, 3, Language.AmericanEnglish)]
-        public async Task SimilarTVSmokeTest(int tvId, int page, string language)
+        public async Task SimilarTVSmokeTest(uint tvId, int page, string language)
         {
             var response = await Client.TV.GetAsync(new SimilarTVRequest
             {
@@ -129,7 +129,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
         // TODO: Needs guest session id or session id
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish)]
-        public async Task TVAccountStatesSmokeTest(int tvId, string language)
+        public async Task TVAccountStatesSmokeTest(uint tvId, string language)
         {
             //var guestSessionId = "";
             //var sessionId = "";
@@ -147,7 +147,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish)]
-        public async Task TVAggregateCreditsSmokeTest(int tvId, string language)
+        public async Task TVAggregateCreditsSmokeTest(uint tvId, string language)
         {
             var response = await Client.TV.GetAsync(new TVAggregateCreditsRequest
             {
@@ -195,7 +195,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
         [InlineData((int)TV.TheOffice,          1, "2020-12-01", "2020-12-14")]
         [InlineData((int)TV.TheTwilightZone,    1, "2020-12-15", "2020-12-28")]
         [InlineData((int)TV.TwentyTwenty,       1, "2021-01-11", "2021-01-23")]
-        public async Task TVChangesSmokeTest(int tvId, int page, string startDate, string endDate)
+        public async Task TVChangesSmokeTest(uint tvId, int page, string startDate, string endDate)
         {
             var response = await Client.TV.GetAsync(new TVChangesRequest
             {
@@ -211,7 +211,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish)]
-        public async Task TVContentRatingsSmokeTest(int tvId, string language)
+        public async Task TVContentRatingsSmokeTest(uint tvId, string language)
         {
             var response = await Client.TV.GetAsync(new TVContentRatingsRequest
             {
@@ -225,7 +225,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish)]
-        public async Task TVCreditsSmokeTest(int tvId, string language)
+        public async Task TVCreditsSmokeTest(uint tvId, string language)
         {
             var response = await Client.TV.GetAsync(new TVCreditsRequest
             {
@@ -241,7 +241,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish, "videos")]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish, "images")]
-        public async Task TVDetailsSmokeTest(int tvId, string language, string appendToResponse)
+        public async Task TVDetailsSmokeTest(uint tvId, string language, string appendToResponse)
         {
             var response = await Client.TV.GetAsync(new TVDetailsRequest
             {
@@ -255,7 +255,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish)]
-        public async Task<TVEpisodeGroupsResponse> TVEpisodeGroupsSmokeTest(int tvId, string language)
+        public async Task<TVEpisodeGroupsResponse> TVEpisodeGroupsSmokeTest(uint tvId, string language)
         {
             var response = await Client.TV.GetAsync(new TVEpisodeGroupsRequest
             {
@@ -271,7 +271,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish)]
-        public async Task TVExternalIdsSmokeRequest(int tvId, string language)
+        public async Task TVExternalIdsSmokeRequest(uint tvId, string language)
         {
             var response = await Client.TV.GetAsync(new TVExternalIdsRequest
             {
@@ -284,7 +284,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish)]
-        public async Task TVImagesSmokeTest(int tvId, string language)
+        public async Task TVImagesSmokeTest(uint tvId, string language)
         {
             var response = await Client.TV.GetAsync(new TVImagesRequest
             {
@@ -297,7 +297,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)TV.GameOfThrones)]
-        public async Task TVKeywordsSmokeTest(int tvId)
+        public async Task TVKeywordsSmokeTest(uint tvId)
         {
             var response = await Client.TV.GetAsync(new TVKeywordsRequest
             {
@@ -334,7 +334,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
         [InlineData((int)TV.TheOffice,      2, Language.AmericanEnglish)]
         [InlineData((int)TV.Shameless,      3, Language.AmericanEnglish)]
         [InlineData((int)TV.SouthPark,      4, Language.AmericanEnglish)]
-        public async Task TVRecommendationsSmokeTest(int tvId, int page, string language)
+        public async Task TVRecommendationsSmokeTest(uint tvId, int page, string language)
         {
             var response = await Client.TV.GetAsync(new TVRecommendationsRequest
             {
@@ -351,7 +351,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
         [InlineData((int)TV.TheOffice,      2, Language.AmericanEnglish)]
         [InlineData((int)TV.Shameless,      3, Language.AmericanEnglish)]
         [InlineData((int)TV.SouthPark,      4, Language.AmericanEnglish)]
-        public async Task TVReviewsSmokeTest(int tvId, int page, string language)
+        public async Task TVReviewsSmokeTest(uint tvId, int page, string language)
         {
             var response = await Client.TV.GetAsync(new TVReviewsRequest
             {
@@ -367,7 +367,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
         [InlineData((int)TV.Dateline)]
         [InlineData((int)TV.TwentyTwenty)]
         [InlineData((int)TV.GameOfThrones)]
-        public async Task TVScreenedTheatricallySmokeTest(int tvId)
+        public async Task TVScreenedTheatricallySmokeTest(uint tvId)
         {
             var response = await Client.TV.GetAsync(new TVScreenedTheatricallyRequest
             {
@@ -380,7 +380,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish)]
-        public async Task TVTranslationsSmokeTest(int tvId, string language)
+        public async Task TVTranslationsSmokeTest(uint tvId, string language)
         {
             var response = await Client.TV.GetAsync(new TVTranslationsRequest
             {
@@ -393,7 +393,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         [Theory]
         [InlineData((int)TV.GameOfThrones, Language.AmericanEnglish)]
-        public async Task TVVideosSmokeTest(int tvId, string language)
+        public async Task TVVideosSmokeTest(uint tvId, string language)
         {
             var response = await Client.TV.GetAsync(new TVVideosRequest
             {
@@ -423,7 +423,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
         [InlineData((int)TV.TheTwilightZone2)]
         [InlineData((int)TV.TwentyTwenty)]
         [InlineData((int)TV.GameOfThrones)]
-        public async Task TVWatchProvidersSmokeTest(int tvId)
+        public async Task TVWatchProvidersSmokeTest(uint tvId)
         {
             var response = await Client.TV.GetAsync(new TVWatchProvidersRequest
             {
