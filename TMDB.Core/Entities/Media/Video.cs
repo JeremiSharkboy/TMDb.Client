@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using TMDB.Core.Enums;
 
 namespace TMDB.Core.Entities.Media
 {
@@ -27,6 +28,6 @@ namespace TMDB.Core.Entities.Media
         public virtual string Site { get; set; }
 
         [JsonProperty("type")]
-        public virtual string Type { get; set; }
+        public virtual VideoType Type { get; set; }
     }
 }
