@@ -13,7 +13,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
             Assert.IsType<CreateGuestSessionResponse>(response);
             Assert.True(response.IsSuccess);
-            Assert.True(response.GuestSessionId != null);
+            Assert.True(response.GuestSessionId is not null);
         }
 
         [Fact]
@@ -23,7 +23,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
             Assert.IsType<CreateRequestTokenResponse>(response);
             Assert.True(response.IsSuccess);
-            Assert.True(response.RequestToken != null);
+            Assert.True(response.RequestToken is not null);
         }
 
         // TODO: I don't believe this can be smoke tested...
@@ -39,7 +39,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         //    Assert.IsType<CreateSessionResponse>(response);
         //    Assert.True(response.IsSuccess);
-        //    Assert.True(response.SessionId != null);
+        //    Assert.True(response.SessionId is not null);
         //}
 
         [Fact]
@@ -54,7 +54,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
             Assert.IsType<CreateSessionWithLoginResponse>(response);
             Assert.True(response.IsSuccess);
-            Assert.True(response.RequestToken != null);
+            Assert.True(response.RequestToken is not null);
         }
 
         [Fact]

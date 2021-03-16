@@ -13,7 +13,7 @@ namespace TMDB.NET
         {
             var parameters = @object.GetType()
                 .GetProperties()
-                .Where(x => x.GetValue(@object, null) != null)
+                .Where(x => x.GetValue(@object, null) is not null)
                 .Select(x => string.Format("{0}={1}", x.PropertyName(), x.Get(@object))) //x.UrlEncode
                 .ToArray();
 

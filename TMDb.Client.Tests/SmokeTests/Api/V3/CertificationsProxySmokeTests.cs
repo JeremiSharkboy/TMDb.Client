@@ -13,7 +13,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
             var response = await Client.Certifications.GetAsync(new MovieCertificationsRequest());
 
             Assert.IsType<MovieCertificationsResponse>(response);
-            Assert.True(response.Certifications != null);
+            Assert.True(response.Certifications is not null);
             Assert.True(response.Certifications.US.Any());
         }
 
@@ -23,7 +23,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
             var response = await Client.Certifications.GetAsync(new TVCertificationsRequest());
 
             Assert.IsType<TVCertificationsResponse>(response);
-            Assert.True(response.Certifications != null);
+            Assert.True(response.Certifications is not null);
             Assert.True(response.Certifications.US.Any());
         }
     }

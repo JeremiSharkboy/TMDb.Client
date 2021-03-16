@@ -23,7 +23,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
             });
 
             Assert.IsType<TVEpisodeGroupsResponse>(response);
-            Assert.True(response.Network != null);
+            Assert.True(response.Network is not null);
             Assert.True(response.Groups.Any());
         }
     }

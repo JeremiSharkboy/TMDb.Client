@@ -29,7 +29,7 @@ namespace TMDB.Core.Tests.ValidationTests.AttributeTests
                 .Where(propInfo => 
                 {
                     var attr = propInfo.GetCustomAttribute<ApiParameterAttribute>();
-                    return attr != null ? string.IsNullOrEmpty(attr.Name) : false;
+                    return attr is not null ? string.IsNullOrEmpty(attr.Name) : false;
                 })
                 .Select(propInfo => propInfo.Name);
 

@@ -116,7 +116,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
             // Assert
             Assert.IsType<TVEpisodesExternalIdsResponse>(response);
-            Assert.True(response.TMDbId != null);
+            Assert.True(response.TMDbId is not null);
         }
 
         [Theory]

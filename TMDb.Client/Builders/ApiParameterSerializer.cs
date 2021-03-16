@@ -31,7 +31,7 @@ namespace TMDB.NET.Builders
                 var value = prop.GetValue(request);
 
                 // TODO: #1 refactor out validation
-                if (value == null)
+                if (value is null)
                 {
                     var test1 = prop.GetCustomAttribute<RequiredAttribute>();
 
@@ -125,7 +125,7 @@ namespace TMDB.NET.Builders
                                                   .GetField(value.ToString())
                                                   .GetCustomAttribute<DescriptionAttribute>();
 
-                        if (enumDescription == null)
+                        if (enumDescription is null)
                         {
                             throw new NullReferenceException($"{prop.Name} {nameof(DescriptionAttribute)}");
                         }

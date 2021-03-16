@@ -22,7 +22,7 @@ namespace TMDB.Core.Tests
 
         public void Dispose()
         {
-            if (Client != null)
+            if (Client is not null)
             {
                 Client = null;
             }
@@ -30,7 +30,7 @@ namespace TMDB.Core.Tests
 
         protected async Task<AccountSmokeTestDeta> GetAccountDataAsync()
         {
-            if (SmokeTestAccountData == null)
+            if (SmokeTestAccountData is null)
             {
                 var accountDetails = await GetAccountDetailsAsync();
             }
@@ -59,7 +59,7 @@ namespace TMDB.Core.Tests
                 SessionId = createSessionResponse.SessionId
             });
 
-            if (SmokeTestAccountData == null)
+            if (SmokeTestAccountData is null)
             {
                 SmokeTestAccountData = new AccountSmokeTestDeta
                 {

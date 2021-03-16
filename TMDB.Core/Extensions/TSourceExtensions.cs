@@ -14,6 +14,6 @@ namespace TMDB.Core
 
         internal static IEnumerable<TSource> FromHierarchy<TSource>(this TSource source,
             Func<TSource, TSource> nextItem) where TSource : class =>
-                source.FromHierarchy(nextItem, s => s != null);
+                source.FromHierarchy(nextItem, s => s is not null);
     }
 }

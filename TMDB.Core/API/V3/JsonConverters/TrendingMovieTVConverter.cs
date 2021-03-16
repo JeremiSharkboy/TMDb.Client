@@ -28,7 +28,7 @@ namespace TMDB.Core.JsonConverters
                 var test = reader.Value as string;
                 var test2 = (string)reader.Value;
 
-                if (test2 == null)
+                if (test2 is null)
                     return null;
                     //return new TrendingMovieTVPersonUnion(); 
 
@@ -70,11 +70,11 @@ namespace TMDB.Core.JsonConverters
         //{
         //    var value = (TrendingMovieTVUnion)@object;
 
-        //    if (value.Movie != null)
+        //    if (value.Movie is not null)
         //    {
         //        serializer.Serialize(writer, value.Movie);
         //    }
-        //    else if (value.TV != null)
+        //    else if (value.TV is not null)
         //    {
         //        serializer.Serialize(writer, value.TV);
         //    }

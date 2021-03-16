@@ -37,11 +37,11 @@ namespace TMDB.Core.JsonConverters
         {
             var value = (PopularPeopleKnownForMovieTVUnion)@object;
 
-            if (value.Movie != null)
+            if (value.Movie is not null)
             {
                 serializer.Serialize(writer, value.Movie);
             }
-            else if (value.TV != null)
+            else if (value.TV is not null)
             {
                 serializer.Serialize(writer, value.TV);
             }

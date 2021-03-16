@@ -23,7 +23,7 @@ namespace TMDB.NET.Builders
         {
             get
             {
-                if (Query != null)
+                if (Query is not null)
                 {
                     var serialized = Query.Select(x => string.Format("{0}={1}", x.Key, x.Value));
                     _uriBuilder.Query = string.Join('&', serialized);
@@ -32,7 +32,7 @@ namespace TMDB.NET.Builders
                 {
                     Path = '/' + Version + Path;
                 }
-                if (PathParameters != null)
+                if (PathParameters is not null)
                 {
                     foreach (var param in PathParameters)
                     {

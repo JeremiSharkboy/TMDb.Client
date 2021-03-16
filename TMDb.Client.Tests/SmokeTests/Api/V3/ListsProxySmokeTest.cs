@@ -16,7 +16,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
         public ListsProxySmokeTest()
         {
-            if (_listSmokeTestData == null)
+            if (_listSmokeTestData is null)
             {
                 Task.Run(Initialize).Wait();
             }

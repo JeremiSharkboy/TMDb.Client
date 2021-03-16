@@ -83,7 +83,7 @@ namespace TMDB.NET
                 responseResult.Exception = ex;
                 _logger.LogException(ex);
 
-                if (ex.InnerException != null)
+                if (ex.InnerException is not null)
                     throw ex.InnerException;
 
                 throw;
@@ -99,7 +99,7 @@ namespace TMDB.NET
 
         public void Dispose()
         {
-            if (Client != null)
+            if (Client is not null)
             {
                 Client.Dispose();
                 Client = null;

@@ -344,7 +344,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
 
             // Assert
             Assert.IsType<MovieWatchProvidersResponse>(response);
-            Assert.True(response?.Results?.US != null);
+            Assert.True(response?.Results?.US is not null);
         }
 
         [Theory]

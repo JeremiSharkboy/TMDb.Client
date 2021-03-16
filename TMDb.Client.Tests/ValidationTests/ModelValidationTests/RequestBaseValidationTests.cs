@@ -52,8 +52,8 @@ namespace TMDB.Core.Tests.ValidationTests.ModelValidationTests
             var props = _requestTypes
                 .Select(type => type.GetProperties())
                 .SelectMany(propInfo => propInfo)
-                .Where(propInfo => propInfo.GetCustomAttribute<ApiParameterAttribute>() == null
-                                && propInfo.GetCustomAttribute<ApiParameterIgnoreAttribute>() == null)
+                .Where(propInfo => propInfo.GetCustomAttribute<ApiParameterAttribute>() is null
+                                && propInfo.GetCustomAttribute<ApiParameterIgnoreAttribute>() is null)
                 .Select(propInfo => propInfo.Name);
 
             Assert.True(props.Count() == 0, "Bad properties: " + string.Join(", ", props));

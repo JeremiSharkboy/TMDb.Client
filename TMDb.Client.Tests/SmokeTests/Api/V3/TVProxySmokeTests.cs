@@ -431,7 +431,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
             });
 
             Assert.IsType<TVWatchProvidersResponse>(response);
-            Assert.True(response?.Results?.US != null);
+            Assert.True(response?.Results?.US is not null);
             Assert.True(response.Results.US.FlatRate.Any()
                      || response.Results.US.Rent.Any()
                      || response.Results.US.Buy.Any());

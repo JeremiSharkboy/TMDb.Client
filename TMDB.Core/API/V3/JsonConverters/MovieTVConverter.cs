@@ -60,15 +60,15 @@ namespace TMDB.Core.JsonConverters
         {
             var value = (MultiSearchResultUnion)@object;
 
-            if (value.Movie != null)
+            if (value.Movie is not null)
             {
                 serializer.Serialize(writer, value.Movie);
             }
-            else if (value.TV != null)
+            else if (value.TV is not null)
             {
                 serializer.Serialize(writer, value.TV);
             }
-            else if (value.Person != null)
+            else if (value.Person is not null)
             {
                 serializer.Serialize(writer, value.Person);
             }

@@ -17,8 +17,8 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
             });
 
             Assert.IsType<CreditsResponse>(response);
-            Assert.True(response.Media != null);
-            Assert.True(response.Person != null);
+            Assert.True(response.Media is not null);
+            Assert.True(response.Person is not null);
         }
     }
 }

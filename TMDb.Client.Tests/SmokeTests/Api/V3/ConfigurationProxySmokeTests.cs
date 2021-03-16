@@ -13,7 +13,7 @@ namespace TMDB.Core.Tests.SmokeTests.Api.V3
             var response = await Client.Configuration.GetConfigurationAsync();
 
             Assert.IsType<ConfigurationResponse>(response);
-            Assert.True(response.Images != null);
+            Assert.True(response.Images is not null);
             Assert.True(response.ChangeKeys.Any());
         }
 
