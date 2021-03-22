@@ -1,8 +1,6 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using TMDB.Core.Api.V3.Models.Account;
-using TMDB.Core.Api.V3.Models.Authentication;
 using TMDB.Core.Enums;
 using TMDB.Core.Tests.TestConstants;
 using Xunit;

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using TMDB.Core.Api;
 
 namespace TMDB.NET.Api.V3.ClientProxies
 {

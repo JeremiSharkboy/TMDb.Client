@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using TMDB.Core.Api.V3.Models.Find;
 using TMDB.Core.Enums;

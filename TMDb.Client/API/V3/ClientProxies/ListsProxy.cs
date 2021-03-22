@@ -1,7 +1,5 @@
 ﻿using System.Threading.Tasks;
-using TMDB.Core.Api.V3.Models.Keywords;
 using TMDB.Core.Api.V3.Models.Lists;
-using TMDB.Core.Api;
 
 namespace TMDB.NET.Api.V3.ClientProxies
 {

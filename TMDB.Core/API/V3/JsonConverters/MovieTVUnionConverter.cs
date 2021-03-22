@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using TMDB.Core.Api.V3.Models.Find;
-using TMDB.Core.Api.V3.Models.Search;
 
 namespace TMDB.Core.JsonConverters
 {

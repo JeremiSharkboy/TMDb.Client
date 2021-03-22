@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using TMDB.Core.Attributes;
-using TMDB.Core.Enums;
+﻿using TMDB.Core.Attributes;
 
 namespace TMDB.Core.Api.V3.Models.Account
 {

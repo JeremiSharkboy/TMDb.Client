@@ -1,5 +1,4 @@
 ﻿using System;
-using TMDB.Core;
 using TMDB.Core.Api.V3.Models;
 
 namespace TMDB.NET.Api

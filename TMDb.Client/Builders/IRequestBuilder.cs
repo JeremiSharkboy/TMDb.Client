@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using TMDB.Core.Api;
 using TMDB.NET.Configurations;

@@ -1,5 +1,4 @@
-﻿using System;
-using TMDB.Core.Attributes;
+﻿using TMDB.Core.Attributes;
 
 namespace TMDB.Core.Api.V3.Models.Lists
 {

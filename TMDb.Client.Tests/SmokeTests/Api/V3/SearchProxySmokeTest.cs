@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TMDB.Core.Api.V3.Models;
 using TMDB.Core.Api.V3.Models.Search;
 using Xunit;
 

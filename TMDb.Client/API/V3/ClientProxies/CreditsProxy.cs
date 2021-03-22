@@ -1,7 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using TMDB.Core.Api.V3.Models.Credits;
-using TMDB.Core.Api;
 
 namespace TMDB.NET.Api.V3.ClientProxies
 {

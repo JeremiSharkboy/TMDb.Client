@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using TMDB.Core.Api.V3.Models.GuestSessionRated;
 using Xunit;
 

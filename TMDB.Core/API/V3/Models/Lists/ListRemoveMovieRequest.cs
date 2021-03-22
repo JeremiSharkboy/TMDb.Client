@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using TMDB.Core.Attributes;
 
 namespace TMDB.Core.Api.V3.Models.Lists

@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using TMDB.Core.Api.V3.Models.TVSeasons;
 using TMDB.Core.Attributes;
 

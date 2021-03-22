@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using TMDB.Core.Api.V3.Models.People;
-using TMDB.Core.Api;
 
 namespace TMDB.NET.Api.V3.ClientProxies
 {
