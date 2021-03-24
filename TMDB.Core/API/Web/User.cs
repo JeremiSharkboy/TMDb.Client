@@ -1,19 +1,51 @@
-﻿
-
+﻿using Microsoft.AspNet.Identity;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TMDB.Core.API.Web
 {
+
     [Table("Users")]
-    public class User
+    public class User : IUser
     {
+        public User()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+
         [Key]
-        [Required]
-        public int id { get; set; }
+        public string Id { get; }
+
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [StringLength(50)]
-        public string Username { get; set; }
+        public string UserName { get; set; }
+
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+    }
+
+    [Table("Comment")]
+    public class Comment
+    {
+        public Comment()
+        {
+            Time = DateTime.Now;
+        }
+
+        [Key]
+        public int CommentId { get; set; }
+
+        public string UserId { get; set; }
+
+        [NotMapped]
+        public virtual User User { get; set; }
+
+        public uint MoiveId { get; set; }
+
+        public string Text { get; set; }
+
+        public DateTime Time { get; set; }
     }
 }
