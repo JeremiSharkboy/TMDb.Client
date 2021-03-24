@@ -27,6 +27,6 @@ namespace TMDB.Core.Api.V3.Models.TV
             Name = "page",
             ParameterType = ParameterType.Query)]
         [Range(1, 1000)]
-        public virtual int Page { get; set; }
+        public virtual uint Page { get; set; }
     }
 }

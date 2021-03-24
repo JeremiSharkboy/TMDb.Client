@@ -10,6 +10,6 @@ namespace TMDB.Core.Api.V3.Models.TV
         public virtual int Id { get; set; }
 
         [JsonProperty("results")]
-        public virtual IEnumerable<Keyword> Results { get; set; }
+        public virtual IEnumerable<Keyword> Keywords { get; set; }
     }
 }
