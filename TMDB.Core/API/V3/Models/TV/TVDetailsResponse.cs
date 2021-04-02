@@ -12,6 +12,8 @@ namespace TMDB.Core.Api.V3.Models.TV
         [JsonProperty("in_production")]
         public virtual bool? InProduction { get; set; }
 
+        public virtual bool IsLiked { get; set; }
+
         [JsonProperty("popularity")]
         public virtual double? Popularity { get; set; }
 

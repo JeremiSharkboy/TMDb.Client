@@ -12,6 +12,8 @@ namespace TMDB.Core.Api.V3.Models.Movies
         [JsonProperty("adult")]
         public virtual bool Adult { get; set; }
 
+        public virtual bool IsLiked { get; set; }
+
         [JsonProperty("video")]
         public virtual bool Video { get; set; }
 

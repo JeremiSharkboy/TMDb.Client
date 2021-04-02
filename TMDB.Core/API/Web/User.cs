@@ -48,4 +48,17 @@ namespace TMDB.Core.API.Web
 
         public DateTime Time { get; set; }
     }
+
+    [Table("Like")]
+    public class Like
+    {
+        [Key]
+        public int Id { get; }
+
+        public string UserId { get; set; }
+
+        public uint MoiveId { get; set; }
+
+        public bool Tv { get; set; }
+    }
 }
