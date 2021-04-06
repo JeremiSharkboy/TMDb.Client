@@ -10,7 +10,14 @@ namespace TMDB.Core.Api.V3.Models.Keywords
             Name = "keyword_id",
             ParameterType = ParameterType.Path)]
         [Required]
-        public virtual int KeywordId { get; set; }
+        public virtual uint KeywordId { get; set; }
+
+        [ApiParameter(
+            Name = "page",
+            ParameterType = ParameterType.Query)]
+        [Range(1, 1000)]
+        public virtual uint Page { get; set; }
+
 
         [ApiParameter(
             Name = "include_adult",

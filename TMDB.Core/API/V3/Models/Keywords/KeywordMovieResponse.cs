@@ -8,5 +8,6 @@ namespace TMDB.Core.Api.V3.Models.Keywords
     {
         [JsonProperty("results")]
         public virtual IEnumerable<MovieMinified> Results { get; set; }
+
     }
 }
