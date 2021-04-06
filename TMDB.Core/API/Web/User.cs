@@ -18,6 +18,7 @@ namespace TMDB.Core.API.Web
         [Key]
         public string Id { get; }
 
+        public uint CommentsCount { get; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string UserName { get; set; }
@@ -60,5 +61,19 @@ namespace TMDB.Core.API.Web
         public uint MoiveId { get; set; }
 
         public bool Tv { get; set; }
+    }
+
+    [Table("Stats")]
+    public class Stats
+    {
+        [Key]
+        public int Id { get; }
+
+        public uint MovieId { get; set; }
+
+        public uint ViewCount { get; set; } = 1;
+        public uint TotalLikes { get; set; } = 0;
+        public DateTime LastOpen { get; set; } = DateTime.Now;
+
     }
 }
