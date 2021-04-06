@@ -89,5 +89,8 @@ namespace TMDB.Core.Api.V3.Models.Movies
 
         [JsonIgnore]
         public IEnumerable<int> GenreIds { get; set; }
+
+        [JsonIgnore]
+        public DateTime? LastView { get; set; }
     }
 }
