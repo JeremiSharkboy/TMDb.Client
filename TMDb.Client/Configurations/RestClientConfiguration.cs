@@ -41,7 +41,7 @@ namespace TMDB.NET.Configurations
                     new StringEnumConverter()
                 }
             };
-            Timeout = TimeSpan.FromSeconds(60);
+            Timeout = TimeSpan.FromSeconds(360);
         }
 
         private static RestClientConfiguration _instance;

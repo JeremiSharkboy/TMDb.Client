@@ -69,11 +69,24 @@ namespace TMDB.Core.API.Web
         [Key]
         public int Id { get; }
 
+        public bool IsTV { get; set; } = false;
+
+        public string Title { get; set; }
+
         public uint MovieId { get; set; }
 
         public uint ViewCount { get; set; } = 1;
         public uint TotalLikes { get; set; } = 0;
+        public uint CommentsCount { get; set; } = 0;
         public DateTime LastOpen { get; set; } = DateTime.Now;
 
+    }
+
+
+    public class TopStats
+    {
+        public List<Stats> TopLikes { get; set; }
+        public List<Stats> TopComments { get; set; }
+        public List<Stats> TopViews { get; set; }
     }
 }
